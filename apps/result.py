@@ -16,12 +16,12 @@ from wordcloud import WordCloud
 def app():
     
     unigrams = pickle.load(open("./pickle/unigramslist.pkl", 'rb'))
-    dfbiagramcolle1 = pickle.load(open("./pickle/dfbiagramcolle.pkl", 'rb'))
-    dfbiagramcolle = pd.DataFrame(dfbiagramcolle1) 
-    dftriagramcolle1= pickle.load(open("./pickle/dftriagramcolle.pkl", 'rb'))
-    dftriagramcolle = pd.DataFrame(dftriagramcolle1) 
-    #dfbiagramcolle= pd.read_pickle('./pickle/dfbiagramcolle.pkl')
-    #dftriagramcolle= pd.read_pickle('./pickle/dftriagramcolle.pkl')
+    #dfbiagramcolle1 = pickle.load(open("./pickle/dfbiagramcolle.pkl", 'rb'))
+    #dfbiagramcolle = pd.DataFrame(dfbiagramcolle1) 
+    #dftriagramcolle1= pickle.load(open("./pickle/dftriagramcolle.pkl", 'rb'))
+    #dftriagramcolle = pd.DataFrame(dftriagramcolle1) 
+    dfbiagramcolle= pd.read_pickle('./pickle/dfbiagramcolle.pkl')
+    dftriagramcolle= pd.read_pickle('./pickle/dftriagramcolle.pkl')
     
     st.title("Prediction Results")
     number = st.sidebar.slider("Select the number of words to predict :", min_value=1, max_value = 10, value=5)
