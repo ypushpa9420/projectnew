@@ -20,8 +20,8 @@ def app():
     #dfbiagramcolle = pd.DataFrame(dfbiagramcolle1) 
     #dftriagramcolle1= pickle.load(open("./pickle/dftriagramcolle.pkl", 'rb'))
     #dftriagramcolle = pd.DataFrame(dftriagramcolle1) 
-    dfbiagramcolle = pd.read_pickle("./pickle/dfbiagramcolle.pkl")
-    dftriagramcolle = pd.read_pickle("./pickle/dftriagramcolle.pkl")
+    dfbiagramcolle = pd.read_pickle(r"./pickle/dfbiagramcolle.pkl")
+    dftriagramcolle = pd.read_pickle(r"./pickle/dftriagramcolle.pkl")
     
     st.title("Prediction Results")
     number = st.sidebar.slider("Select the number of words to predict :", min_value=1, max_value = 10, value=5)
